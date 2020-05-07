@@ -13,12 +13,6 @@ public class ShuffleCardsController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void AddSetOfCards()
     {
         if(SetOfCards.Count != 0)
@@ -33,23 +27,23 @@ public class ShuffleCardsController : MonoBehaviour
                 string CardNumber = i.ToString();
                 if (CardNumber == 1.ToString())
                 {
-                    CardNumber = "A";
+                    CardNumber = "Z";
                 }
                 else if (CardNumber == 10.ToString())
                 {
-                    CardNumber = "T";
+                    CardNumber = "V";
                 }
                 else if (CardNumber == 11.ToString())
                 {
-                    CardNumber = "J";
+                    CardNumber = "W";
                 }
                 else if (CardNumber == 12.ToString())
                 {
-                    CardNumber = "Q";
+                    CardNumber = "X";
                 }
                 else if (CardNumber == 13.ToString())
                 {
-                    CardNumber = "K";
+                    CardNumber = "Y";
                     i = 0;
                 }
             
@@ -71,19 +65,9 @@ public class ShuffleCardsController : MonoBehaviour
                 }
             }
         }
-        AddDoubleQuotes();
         RandomSetOfCards();
     }
 
-    void AddDoubleQuotes()
-    {
-        for (int i = 0; i < SetOfCards.Count; i++)
-        {
-            var tempSetOfCards = SetOfCards[i];
-            tempSetOfCards = "\"" + tempSetOfCards + "\"";
-            SetOfCards[i] = tempSetOfCards;
-        }
-    }
 
     public void RandomSetOfCards()
     {

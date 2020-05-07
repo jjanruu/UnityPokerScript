@@ -9,29 +9,17 @@ public class DisableButton : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Button>().enabled = false;
+        Invoke("EnableButton", .2f);
     }
 
     public void DisableButtonClick()
     {
-        gameObject.GetComponent<Button>().enabled = false;
+        
         //CheckEnable();
     }
 
-    void CheckEnable()
+    void EnableButton()
     {
-        int countWinner = 0;
-        for (int i = 0; i < winner.Length; i++)
-        {
-            if(winner[i].activeInHierarchy == false)
-            {
-                countWinner++;
-                if(countWinner == 3)
-                {
-                    gameObject.GetComponent<Button>().enabled = true;
-                    countWinner = 0;
-                }
-            }
-        }
-        
+        gameObject.GetComponent<Button>().enabled = true;
     }
 }
