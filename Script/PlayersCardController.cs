@@ -12,7 +12,7 @@ public class PlayersCardController : MonoBehaviour
     public ShuffleCardsController GetShuffleCardsController;
 
     [Serializable]
-    public class CombinationList
+    public class PlayerClass
     {
         public string Rank;
         public List<string> MainCards;
@@ -29,7 +29,7 @@ public class PlayersCardController : MonoBehaviour
         public string TempRoyalFlush;
 
     }
-    public List<CombinationList> Players;
+    public List<PlayerClass> Players;
 
     void Start()
     {
